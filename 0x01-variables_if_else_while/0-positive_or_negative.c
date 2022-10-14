@@ -3,13 +3,10 @@
 #include <time.h>
 
 /**
- *
- * main-program entry point.
- *
- * Return:0-no error,non zero value if error.
- *
- **/
-
+ * main - assigns a random number to int n everytime
+ * it executes, and prints it
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
