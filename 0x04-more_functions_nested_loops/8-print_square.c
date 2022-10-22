@@ -1,31 +1,33 @@
 #include "main.h"
 
 /**
- * print_diagonal - draws a diagonal line on the terminal
- * @n: number of times the character \ should be printed
+ * print_square - prints square using "#" character of a given size
+ *
+ *@size: size of square
+ *
+ * Return: void
  */
 
-void print_diagonal(int n)
+void print_square(int size)
 {
+	int i = 0, c;
 
-	if (n <= 0)
+	if (size > 0)
 	{
-		_putchar('\n');
+		while (i < size)
+		{
+			c = 0;
+			while (c < size)
+			{
+				_putchar(35);
+				c++;
+			}
+			_putchar('\n');
+			i++;
+		}
 	}
 	else
 	{
-		int i, j;
-
-		for (i = 0; i < n; i++)
-		{
-			for (j = 0; j < n; j++)
-			{
-				if (j == i)
-					_putchar('\\');
-				else if (j < i)
-					_putchar(' ');
-			}
-			_putchar('\n');
-		}
+		_putchar('\n');
 	}
 }
